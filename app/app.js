@@ -21,9 +21,7 @@ data.forEach((item) => {
     makeDiv(item)
 });
 
-
 inputButton.addEventListener("click", () => {
-
     itemsArray.push(inputField.value);
     localStorage.setItem('items', JSON.stringify(itemsArray));
 
