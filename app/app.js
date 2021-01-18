@@ -1,19 +1,18 @@
 const inputField = document.querySelector(".input");
 const inputButton = document.querySelector(".add");
 const listOfGames = document.querySelector(".items");
+inputButton.disabled = true;
 
-if (inputField.value.length === 0) {
-    inputButton.disabled = true;
-} else {
-    inputButton.disabled = false;
-}
+inputField.addEventListener("keyup", () => {
+    if (inputField.value.length <= 0) {
+        inputButton.disabled = true;
+    } else {
+        inputButton.disabled = false;
+    }
+});
 
 inputButton.addEventListener("click", () => {
-    // console.log(inputField.value);
     
-        /* alert("ENTER THE ITEM BRO 🤬🤬🤬");
-        return 0; */
-
     let spaceOfList = document.createElement("DIV");
     let item = document.createElement("LI");
     let button = document.createElement("BUTTON");

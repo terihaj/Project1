@@ -20,7 +20,9 @@ $border: 1px solid black;
   flex-direction: column;
   border: $border;
   border-radius: 15px;
+  overflow: auto;
   .header {
+    min-height: 30%;
     height: 30%;
     background: rgb(219, 100, 100);
     display: flex;
@@ -55,7 +57,11 @@ $border: 1px solid black;
 
 .item-container {
   display: flex;
-  overflow: none;
+  overflow: hidden;
+  .items {
+    max-height: 100%;
+    overflow: hidden;
+  }
   li {
     border: $border;
     border-radius: 5px;
@@ -78,6 +84,10 @@ footer {
   display: flex;
   justify-content: center;
   margin: 12px 0;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   p {
     color: grey;
     font-size: 11px;
