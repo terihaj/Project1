@@ -11,8 +11,32 @@ inputField.addEventListener("keyup", () => {
     }
 });
 
+console.log(localStorage);
+let itemsArray = localStorage.getItem('items')
+  ? JSON.parse(localStorage.getItem('items'))
+  : []
+localStorage.setItem('items', JSON.stringify(itemsArray));
+const data = JSON.parse(localStorage.getItem('items'));
+
+data.forEach((item) => {
+    makeDiv(item)
+});
+
+console.log(data);
+
 inputButton.addEventListener("click", () => {
+
+    itemsArray.push(inputField.value);
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+    console.log(localStorage);
+
+    makeDiv(inputField.value);
     
+    inputField.value = "";
+    inputButton.disabled = true;
+});
+
+function makeDiv(itemInInput) { 
     let spaceOfList = document.createElement("DIV");
     let item = document.createElement("LI");
     let button = document.createElement("BUTTON");
@@ -21,15 +45,19 @@ inputButton.addEventListener("click", () => {
     item.classList.add("item");
     button.classList.add("complete");
 
-    item.innerHTML = inputField.value;
+    item.innerHTML = itemInInput;
     button.innerHTML = "DONE";
-
+    
     spaceOfList.appendChild(item);
     spaceOfList.appendChild(button);
     listOfGames.appendChild(spaceOfList);
-    
+
     item.addEventListener("dblclick", (e) => {
         e.target.parentElement.remove();
+        let removeItem = e.target.innerHTML;
+        data.splice((data.indexOf(removeItem)), 1);
+        itemsArray = data;
+        localStorage.setItem('items', JSON.stringify(itemsArray));
     });
 
     let flag = true;
@@ -39,5 +67,4 @@ inputButton.addEventListener("click", () => {
         button.innerHTML = flag ? "NOPE" : "DONE";
         flag = !flag;
     });
-
-});
+}
