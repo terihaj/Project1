@@ -23,6 +23,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border: 1px solid black;
+  border-radius: 15px;
 }
 
 .content .header {
@@ -39,6 +40,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   border: 1px solid black;
+  border-radius: 15px;
 }
 
 .content .header .input-field {
@@ -68,7 +70,6 @@
   font-size: 28px;
   text-align: left;
   padding: 10px;
-  border: 1px solid black;
 }
 
 .item-container {
@@ -79,21 +80,34 @@
 
 .item-container li {
   border: 1px solid black;
+  border-radius: 5px;
   width: 95%;
   list-style: none;
+  font-size: 22px;
   padding: 0 10px;
 }
 
 .item-container button {
+  border-radius: 5px;
   font-size: 14px;
   background-color: yellow;
   padding: 0 10px;
 }
 
 footer {
-  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px 0;
 }
 
 footer p {
   color: grey;
+}
+
+.crossed-out {
+  text-decoration: line-through;
 }

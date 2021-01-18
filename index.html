@@ -12,30 +12,32 @@
 <body>
   <div class="content">
     <header class="header">
-      <h2>Add a game to the wishlist!</h2>
+      <h2>Add a game to the list!</h2>
       <div class="input-field">
-        <input type="text" value="Name of a video game" class="input">
+        <input type="text" value="Name of a video game" onfocus="this.value=''" class="input">
         <button type="button" class="add">ADD</button>
       </div>
     </header>
     <section class="list">
       <ul class="items">
+        <!-- 
         <div class="item-container">
           <li class="item">God of War</li>
-          <button>Complete</button>
+          <button class="complete">Complete</button>
         </div>
         <div class="item-container">
           <li class="item">God of War</li>
-          <button>Complete</button>
+          <button class="complete">Complete</button>
         </div>
         <div class="item-container">
           <li class="item">God of War</li>
-          <button>Complete</button>
-        </div>
+          <button class="complete">Complete</button>
+        </div> 
+      -->
       </ul>
     </section>
     <footer>
-      <p class="dbl">** Double click a game to remove it **</p>
+      <p class="dbl">** Double click an item to remove it **</p>
     </footer>
   </div>
   <script src="app/app.js"></script>
