@@ -55,6 +55,7 @@ $border: 1px solid black;
 
 .item-container {
   display: flex;
+  overflow: none;
   li {
     border: $border;
     border-radius: 5px;
@@ -62,24 +63,23 @@ $border: 1px solid black;
     list-style: none;
     font-size: 22px;
     padding: 0 10px;
+    margin: 5px 0;
   }
   button {
     border-radius: 5px;
     font-size: 14px;
     background-color: $buttonColor;
     padding: 0 10px;
+    margin: 5px 0;
   }
 }
 
 footer {
   display: flex;
   justify-content: center;
-  margin: 15px 0;
+  margin: 12px 0;
   p {
     color: grey;
+    font-size: 11px;
   }
-}
-
-.crossed-out {
-  text-decoration: line-through;
 }
