@@ -3,4 +3,97 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.content {
+  height: 80vh;
+  width: 50vw;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+}
+
+.content .header {
+  height: 30%;
+  background: #db6464;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 1px solid black;
+}
+
+.content .header .input-field {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content .header .input-field input {
+  width: 90%;
+  height: 50px;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.content .header .input-field button {
+  width: 10%;
+  background-color: yellow;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+.content .list {
+  font-size: 28px;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item-container li {
+  border: 1px solid black;
+  width: 95%;
+  list-style: none;
+  padding: 0 10px;
+}
+
+.item-container button {
+  font-size: 14px;
+  background-color: yellow;
+  padding: 0 10px;
+}
+
+footer {
+  margin: 20px 0;
+}
+
+footer p {
+  color: grey;
 }
