@@ -11,7 +11,6 @@ inputField.addEventListener("keyup", () => {
     }
 });
 
-console.log(localStorage);
 let itemsArray = localStorage.getItem('items')
   ? JSON.parse(localStorage.getItem('items'))
   : []
@@ -22,13 +21,11 @@ data.forEach((item) => {
     makeDiv(item)
 });
 
-console.log(data);
 
 inputButton.addEventListener("click", () => {
 
     itemsArray.push(inputField.value);
     localStorage.setItem('items', JSON.stringify(itemsArray));
-    console.log(localStorage);
 
     makeDiv(inputField.value);
     
