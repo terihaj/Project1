@@ -8,7 +8,7 @@
 
 .content {
   height: 80vh;
-  width: 50vw;
+  width: 40vw;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -54,15 +54,15 @@
       justify-content: space-around;
 }
 
-.content .header .input-field input {
-  width: 90%;
+.content .header .input-field .input {
+  width: 85%;
   height: 50px;
   font-size: 20px;
   padding: 0 10px;
 }
 
-.content .header .input-field button {
-  width: 10%;
+.content .header .input-field .add {
+  width: 20%;
   background-color: yellow;
   border: 1px solid black;
   font-size: 16px;
@@ -86,7 +86,7 @@
   overflow: hidden;
 }
 
-.item-container li {
+.item-container .item {
   border: 1px solid black;
   border-radius: 5px;
   width: 95%;
@@ -111,7 +111,6 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 12px 0;
   position: absolute;
   top: 90%;
   left: 50%;
@@ -119,7 +118,24 @@ footer {
           transform: translateX(-50%);
 }
 
-footer p {
+footer .dbl {
   color: grey;
-  font-size: 11px;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .content {
+    height: 80vh;
+    width: 80vw;
+    min-width: 250px;
+  }
+  p {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    width: 60vw;
+  }
 }

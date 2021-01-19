@@ -10,7 +10,7 @@ $border: 1px solid black;
 
 .content {
   height: 80vh;
-  width: 50vw;
+  width: 40vw;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -34,14 +34,14 @@ $border: 1px solid black;
       width: 100%;
       display: flex;
       justify-content: space-around;
-      input {
-        width: 90%;
+      .input {
+        width: 85%;
         height: 50px;
         font-size: 20px;
         padding: 0 10px;
       }
-      button {
-        width: 10%;
+      .add {
+        width: 20%;
         background-color: $buttonColor;
         border: $border;
         font-size: 16px;
@@ -62,7 +62,7 @@ $border: 1px solid black;
     max-height: 100%;
     overflow: hidden;
   }
-  li {
+  .item {
     border: $border;
     border-radius: 5px;
     width: 95%;
@@ -83,13 +83,29 @@ $border: 1px solid black;
 footer {
   display: flex;
   justify-content: center;
-  margin: 12px 0;
   position: absolute;
   top: 90%;
   left: 50%;
   transform: translateX(-50%);
-  p {
+  .dbl {
     color: grey;
-    font-size: 11px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .content {
+    height: 80vh;
+    width: 80vw;
+    min-width: 250px;
+  }
+  p {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    width: 60vw;
   }
 }
