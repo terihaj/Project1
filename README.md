@@ -2,4 +2,6 @@
 
 - fuck
 - uhh
-- ayo uhh fuck
+- a jel
+
+![pepega](https://cdn.discordapp.com/emojis/568217642926866455.png "PEPEGA")
